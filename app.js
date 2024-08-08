@@ -1,13 +1,11 @@
-const http = require('http')
+const http = require("http");
 
+http
+  .createServer(function (req, res) {
+    res.write("Hello from server");
 
-http.createServer(function (req, res) {
-        res.write('Hello from server')
-        
-	res.end();
+    res.end();
+  })
+  .listen(3000);
 
-}
-).listen(3000)
-
-console.log("Server started")
-
+console.log("Server started");
